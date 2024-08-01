@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            BMTC
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'book_ticket' %}">Book Ticket</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+        <button><a href="{% url 'login' %}">Login  /  Sign Up </a></button>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

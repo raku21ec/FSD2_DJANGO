@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Bus Ticket</title>
+</head>
+<body>
+    <h1>Your Bus Ticket</h1>
+    <p>Dear {{ ticket.passenger_name }},</p>
+    <p>Thank you for booking a bus ticket with us. Here are your ticket details:</p>
+    <ul>
+        <li>Departure City: {{ ticket.departure_city }}</li>
+        <li>Destination City: {{ ticket.destination_city }}</li>
+        <li>Departure Time: {{ ticket.departure_time }}</li>
+        <li>Seat Number: {{ ticket.seat_number }}</li>
+    </ul>
+    <p>Have a safe journey!</p>
+</body>
+</html>

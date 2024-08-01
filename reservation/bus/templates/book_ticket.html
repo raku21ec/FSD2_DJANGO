@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}Book Ticket{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- <h1>Book Your Bus Ticket</h1> -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Book Ticket</button>
+    </form>
+</div>
+
+{% endblock %}
